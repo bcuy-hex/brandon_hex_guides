@@ -1,0 +1,20 @@
+name: Publish Hex context
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  publish_hex_context:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: hex-inc/action-context-toolkit@v2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          token: ${{ secrets.HEX_API_TOKEN }}
+          hex_url: https://rc.hex.tech
+          comment_on_pr: true
