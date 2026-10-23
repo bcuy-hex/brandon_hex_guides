@@ -1,0 +1,7 @@
+{
+  "guides": [
+    { "path": "guides/hex_gh.md", "hexFilePath": "hex_gh.md" },
+    { "pattern": "guides/*_gh.md", "transform": { "stripFolders": true } }
+  ],
+  "semanticProjects": []
+}
