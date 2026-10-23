@@ -2,6 +2,7 @@
 name: BUFO Response Rule
 description: Required suffix for every agent response.
 ---
+# GITHUB RULES v1
 
 # Upload note
 
